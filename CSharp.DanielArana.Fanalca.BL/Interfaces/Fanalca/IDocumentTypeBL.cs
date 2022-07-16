@@ -11,7 +11,7 @@ namespace CSharp.DanielArana.Fanalca.BL.Interfaces.Fanalca
 {
     public interface IDocumentTypeBL
     {
-        public ActionResult<Respuesta> Get();
+        public Task<Respuesta> Get();
         public ActionResult<Respuesta> Get(int Id);
         public ActionResult<Respuesta> Add(DocumentType oModel);
         public ActionResult<Respuesta> Edit(DocumentType oModel);

@@ -15,7 +15,7 @@ namespace CSharp.DanielArana.Fanalca.DAL.Fanalca
     public class DocumentTypeDAL
     {
 
-        public static ActionResult<Respuesta> Get()
+        public static Respuesta Get()
         {
             Respuesta oRespuesta = new Respuesta();
             try

@@ -29,9 +29,9 @@ namespace CSharp.DanielArana.Fanalca.BL.Imp.Fanalca
             return DocumentTypeDAL.Edit(oModel);
         }
 
-        public ActionResult<Respuesta> Get()
+        public Task<Respuesta> Get()
         {
-            return DocumentTypeDAL.Get();
+            return Task.FromResult(DocumentTypeDAL.Get());
         }
 
         public ActionResult<Respuesta> Get(int Id)

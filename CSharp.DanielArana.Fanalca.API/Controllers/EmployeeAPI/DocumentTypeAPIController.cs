@@ -8,12 +8,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CSharp.DanielArana.Fanalca.API.Controllers.EmployeeAPI
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class DocumentTypeAPIController : ControllerBase
@@ -47,11 +48,11 @@ namespace CSharp.DanielArana.Fanalca.API.Controllers.EmployeeAPI
 
         // GET: api/<DocumentTypeAPIController>
         [HttpGet]
-        public ActionResult<Respuesta> Get()
+        public async Task<ActionResult<Respuesta>> Get()
         {
             try
             {
-                return Ok(_accionBL_Consultar.Get());
+                return Ok(await _accionBL_Consultar.Get());
             }
             catch (Exception ex)
             {
